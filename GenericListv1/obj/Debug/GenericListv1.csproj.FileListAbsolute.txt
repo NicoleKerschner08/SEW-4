@@ -1,0 +1,7 @@
+C:\Users\nicol\OneDrive\Desktop\GenList\GenericListv1\bin\Debug\GenericListv1.exe.config
+C:\Users\nicol\OneDrive\Desktop\GenList\GenericListv1\bin\Debug\GenericListv1.exe
+C:\Users\nicol\OneDrive\Desktop\GenList\GenericListv1\bin\Debug\GenericListv1.pdb
+C:\Users\nicol\OneDrive\Desktop\GenList\GenericListv1\obj\Debug\GenericListv1.csproj.AssemblyReference.cache
+C:\Users\nicol\OneDrive\Desktop\GenList\GenericListv1\obj\Debug\GenericListv1.csproj.CoreCompileInputs.cache
+C:\Users\nicol\OneDrive\Desktop\GenList\GenericListv1\obj\Debug\GenericListv1.exe
+C:\Users\nicol\OneDrive\Desktop\GenList\GenericListv1\obj\Debug\GenericListv1.pdb
