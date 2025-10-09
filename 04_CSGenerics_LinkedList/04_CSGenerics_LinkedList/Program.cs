@@ -40,11 +40,20 @@ namespace _04_CSGenerics_LinkedList
             return count;
         }
 
-        public ListEntry<T> Pop()
+        public T Pop()
         {
-            ListEntry<T> temp = firstEntry;
-            this.firstEntry = firstEntry.next;
+            ListEntry<T> current = firstEntry;
+            while (current.next.next != null)
+            {
+                current = current.next;
+            }
+            T temp = current.next.data;
+            current.next = null;
             return temp;
+
+           /* ListEntry<T> temp = firstEntry;
+            this.firstEntry = firstEntry.next;
+            return temp;*/
         }
 
         public void shiftFwd(int shiftValue)
@@ -95,6 +104,8 @@ namespace _04_CSGenerics_LinkedList
             meineListe.Ausgabe();
             meineListe.shiftBwd(3);
             meineListe.Ausgabe();
+            char data = meineListe.Pop();
+            Console.WriteLine(data);
             Console.ReadKey();
         }
     }
