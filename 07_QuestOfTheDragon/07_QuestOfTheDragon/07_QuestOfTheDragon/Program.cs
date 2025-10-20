@@ -81,8 +81,9 @@ namespace _07_QuestOfTheDragon
                         Console.WriteLine("Falsche Eingabe");
                         break;
                 } 
-            } while (Hero.life > 0 || Dragon.life > 0);
-
+            } while (Hero.life > 0 && Dragon.life > 0);
+            Console.WriteLine("Das Spiel wurde durchgespielt!");
+            Console.ReadKey();
         } 
     }
 }
