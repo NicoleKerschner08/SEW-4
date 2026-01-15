@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="15_AsyncChatClient/15_AsyncChatClient.csproj" Id="fe52dbec-ed82-40b3-8a87-0dfc4feb501a" />
+  <Project Path="AsyncChatServer/AsyncChatServer.csproj" Id="a076d48f-8346-4996-9c63-b49d67ee70d9" />
+</Solution>

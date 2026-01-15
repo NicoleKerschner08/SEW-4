@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="14_SynchronizationContext/14_SynchronizationContext.csproj" />
+  <Project Path="wpf_synchronization/wpf_synchronization.csproj" />
+</Solution>
