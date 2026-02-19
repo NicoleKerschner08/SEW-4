@@ -5,28 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:musicplayer"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"
+        Closing="onClosing">
     <StackPanel>
         <StackPanel x:Name="view_start" Orientation="Horizontal" Visibility="Visible">
-        <StackPanel Width="400">
-            <StackPanel Orientation="Horizontal">
+            <StackPanel Width="400">
+                <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Playlists:" FontSize="24" Margin="10"/>
                     <Button Content="Add Playlist" Width="100" Margin="10" Click="AddPlaylistButton_Click" FontWeight="Bold"/>
-                <Button Content="Delete Playlist" Width="100" Margin="10" Click="DeletePlaylistButton_Click" FontWeight="Bold"/>
-            </StackPanel>
+                    <Button Content="Delete Playlist" Width="100" Margin="10" Click="DeletePlaylistButton_Click" FontWeight="Bold"/>
+                </StackPanel>
                 <ListBox x:Name="PlaylistListBox" Width="200" Margin="10" MouseDoubleClick="ShowPlaylistContent_Click"/>
-        </StackPanel>
-        <StackPanel Width="400">
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Songs:" FontSize="24" Margin="10"/>
-                <Button Content="Add Song" Width="100" Margin="10" Click="AddSongButton_Click" FontWeight="Bold"/>
-                <Button Content="Delete Song" Width="100" Margin="10" Click="DeleteSongButton_Click" FontWeight="Bold"/>
             </StackPanel>
-            <ListBox x:Name="SongsListBox" Width="200" Margin="10"/>
+            <StackPanel Width="400">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Songs:" FontSize="24" Margin="10"/>
+                    <Button Content="Add Song" Width="100" Margin="10" Click="AddSongButton_Click" FontWeight="Bold"/>
+                    <Button Content="Delete Song" Width="100" Margin="10" Click="DeleteSongButton_Click" FontWeight="Bold"/>
+                </StackPanel>
+                <ListBox x:Name="SongsListBox" Width="200" Margin="10"/>
+            </StackPanel>
         </StackPanel>
-        </StackPanel>
-        
-        
+
+
         <StackPanel x:Name="view_addsong" Visibility="Collapsed">
             <StackPanel Orientation="Horizontal" Margin="10">
                 <TextBlock Text="Add New Song" FontSize="24" Margin="10"/>
@@ -50,8 +51,8 @@
             </StackPanel>
             <Button Content="Save" Width="100" Margin="10" Click="saveSong_Click" FontWeight="Bold" HorizontalAlignment="Left"/>
         </StackPanel>
-        
-        
+
+
         <StackPanel x:Name="view_addplaylist" Visibility="Collapsed">
             <StackPanel Orientation="Horizontal" Margin="10">
                 <TextBlock Text="Add New Playlist" FontSize="24" Margin="10"/>
@@ -63,7 +64,7 @@
             </StackPanel>
             <Button Content="Save" Width="100" Margin="10" Click="savePlaylist_Click" FontWeight="Bold" HorizontalAlignment="Left"/>
         </StackPanel>
-        
+
 
         <StackPanel x:Name="view_playlist" Visibility="Collapsed">
             <Button Click="backToStartViewPlaylistContent" Width="100" HorizontalAlignment="Left">Back</Button>
