@@ -1,5 +1,5 @@
 ﻿    using System;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
     using System.Text;
@@ -23,6 +23,7 @@ using System.Linq;
     {
         List<playlist> playlists = new List<playlist>();
         List<lied> songs = new List<lied>();
+        MediaPlayer mp = new MediaPlayer();
         public MainWindow()
         {
             InitializeComponent();
@@ -37,7 +38,6 @@ using System.Linq;
         private void AddPlaylistButton_Click(object sender, RoutedEventArgs e)
         {
             SwitchView(view_start, view_addplaylist);
-
         }
 
         private void DeletePlaylistButton_Click(object sender, RoutedEventArgs e)
@@ -225,6 +225,37 @@ using System.Linq;
                 }
                 sr.Close();
             }
+        }
+        private void playSong_playlistContentListBox(object sender, RoutedEventArgs e)
+        {
+            playSongFromRandomListBox(ListBox_playlistContent);
+        }
+
+        private void OnMediaOpened(object sender, EventArgs e)
+        {
+            mp.Volume = 1.0;
+            mp.Play();
+        }
+
+        private void playSongFromRandomListBox(ListBox listBox)
+        {
+            lied selectedLied = FindSongByDisplayName(listBox.SelectedItem.ToString());
+            string path = System.IO.Path.Combine(
+                AppDomain.CurrentDomain.BaseDirectory,
+                selectedLied.ToString() + ".mp3"
+                );
+            mp.Stop();
+            mp.Close();
+
+            mp.MediaOpened -= OnMediaOpened; // wichtig gegen mehrfaches Auslösen
+            mp.MediaOpened += OnMediaOpened;
+
+            mp.Open(new Uri(path, UriKind.Absolute));
+        }
+
+        private void playSong_SongsListBox(object sender, SelectionChangedEventArgs e)
+        {
+            playSongFromRandomListBox(SongsListBox);
         }
     }
 }

@@ -15,7 +15,7 @@
                     <Button Content="Add Playlist" Width="100" Margin="10" Click="AddPlaylistButton_Click" FontWeight="Bold"/>
                     <Button Content="Delete Playlist" Width="100" Margin="10" Click="DeletePlaylistButton_Click" FontWeight="Bold"/>
                 </StackPanel>
-                <ListBox x:Name="PlaylistListBox" Width="200" Margin="10" MouseDoubleClick="ShowPlaylistContent_Click"/>
+                <ListBox x:Name="PlaylistListBox" Width="300" Margin="10" MouseDoubleClick="ShowPlaylistContent_Click"/>
             </StackPanel>
             <StackPanel Width="400">
                 <StackPanel Orientation="Horizontal">
@@ -23,7 +23,7 @@
                     <Button Content="Add Song" Width="100" Margin="10" Click="AddSongButton_Click" FontWeight="Bold"/>
                     <Button Content="Delete Song" Width="100" Margin="10" Click="DeleteSongButton_Click" FontWeight="Bold"/>
                 </StackPanel>
-                <ListBox x:Name="SongsListBox" Width="200" Margin="10"/>
+                <ListBox x:Name="SongsListBox" Width="300" Margin="10" MouseDoubleClick="playSong_SongsListBox"/>
             </StackPanel>
         </StackPanel>
 
@@ -74,13 +74,13 @@
                 <Button Content="Delete Song" Width="100" Margin="10" Click="delete_song_from_playlist_Click" FontWeight="Bold"/>
             </StackPanel>
             <TextBlock FontSize="16" Margin="10" >Songs:</TextBlock>
-            <ListBox x:Name="ListBox_playlistContent" Width="200" Margin="10" HorizontalAlignment="Left"/>
+            <ListBox x:Name="ListBox_playlistContent" Width="300" Margin="10" HorizontalAlignment="Left" MouseDoubleClick="playSong_playlistContentListBox"/>
         </StackPanel>
 
         <StackPanel x:Name="view_selectSong" Visibility="Collapsed">
             <Button Content="Back" Width="100" Margin="10" Click="backToStartViewShowSongs" FontWeight="Bold" HorizontalAlignment="Left"/>
             <TextBlock FontSize="24" Margin="10" >Songs:</TextBlock>
-            <ListBox x:Name="ListBox_ShowSongs" Width="200" Margin="10" HorizontalAlignment="Left" MouseDoubleClick="saveSongToPlaylist"/>
+            <ListBox x:Name="ListBox_ShowSongs" Width="300" Margin="10" HorizontalAlignment="Left" MouseDoubleClick="saveSongToPlaylist"/>
         </StackPanel>
     </StackPanel>
 </Window>
