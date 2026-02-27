@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="19_observer_pattern/19_observer_pattern.csproj" Id="2fa29f8a-e4b2-4ba6-81ac-497251bbcd88" />
+  <Project Path="buttonObserver/buttonObserver.csproj" Id="89b60095-df55-4080-b04a-c12b578bade7" />
+  <Project Path="CSharp_Event/CSharp_Event.csproj" Id="f995449f-56be-4dcb-85c7-d3ba8483c867" />
+  <Project Path="TextObservers/TextObservers.csproj" Id="bc03431c-f2c6-4fd7-af69-38da14efe2b0" />
+</Solution>

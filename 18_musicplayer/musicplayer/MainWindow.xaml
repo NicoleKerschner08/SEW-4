@@ -23,7 +23,7 @@
                     <Button Content="Add Song" Width="100" Margin="10" Click="AddSongButton_Click" FontWeight="Bold"/>
                     <Button Content="Delete Song" Width="100" Margin="10" Click="DeleteSongButton_Click" FontWeight="Bold"/>
                 </StackPanel>
-                <ListBox x:Name="SongsListBox" Width="300" Margin="10" MouseDoubleClick="playSong_SongsListBox"/>
+                <ListBox x:Name="SongsListBox" Width="300" Margin="10"/>
             </StackPanel>
         </StackPanel>
 
