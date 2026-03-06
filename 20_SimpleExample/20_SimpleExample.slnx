@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="20_SimpleExample/20_SimpleExample.csproj" Id="8ad08170-ff84-4c57-9d0b-270096430c1a" />
+  <Project Path="Städteliste/Städteliste.csproj" Id="16f43142-833b-49c9-a834-8a1e530d5326" />
+  <Project Path="TimerExample/TimerExample.csproj" Id="7f00423b-c7a0-45fd-91c5-662289c5a055" />
+</Solution>
