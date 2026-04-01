@@ -8,7 +8,7 @@
         Title="MainWindow" Height="450" Width="800">
     <StackPanel>
         <TextBox x:Name="tbxTextBox" TextChanged="tbxTextBox_TextChanged"></TextBox>
-        <Label x:Name="Label1"></Label>
+        <Label x:Name="Label1" Content="{Binding ElementName=tbxTextBox, Path=Text, UpdateSourceTrigger =PropertyChanged}"></Label>
         <Label x:Name="Label2"></Label>
         <Label x:Name="Label3"></Label>
         <Label x:Name="Label4"></Label>

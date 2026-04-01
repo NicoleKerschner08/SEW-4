@@ -28,7 +28,7 @@ namespace TextObservers
         {
             InitializeComponent();
 
-            TextEvent += (new LabelObserver(Label1)).Update;
+            //TextEvent += (new LabelObserver(Label1)).Update;
             TextEvent += (new LabelObserver(Label2)).Update;
             TextEvent += (new LabelObserver(Label3)).Update;
             TextEvent += (new LabelObserver(Label4)).Update;
