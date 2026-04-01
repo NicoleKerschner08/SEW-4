@@ -1,0 +1,15 @@
+﻿<Window x:Class="_23_Click_Counter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_23_Click_Counter"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel>
+        <Button Name="btn_clickCounter" Content="Zeitpunkt loggen" Margin="10" Height="30" FontSize="18" Command="{Binding cmdClick}" CommandParameter="log"/>
+        <ListBox Name="lb_clickCounter" Margin="10" FontSize="18" ItemsSource="{Binding Collection}" Height="250"/>
+        <Button Name="btn_clear" Content="Liste leeren" Margin="10" Height="30" FontSize="18"  Command="{Binding cmdClick}" CommandParameter="clear"/>
+        <TextBlock Name="tb_clickCounter" Margin="10" FontSize="18" Text="{Binding count}"/>
+    </StackPanel>
+</Window>
