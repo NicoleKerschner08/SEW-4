@@ -1,0 +1,6 @@
+@_25_cryptoPriceAPI_HostAddress = http://localhost:5101
+
+GET {{_25_cryptoPriceAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
