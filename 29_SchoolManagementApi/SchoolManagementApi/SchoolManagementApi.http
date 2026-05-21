@@ -1,0 +1,35 @@
+@SchoolManagementApi_HostAddress = http://localhost:7076
+
+GET {{SchoolManagementApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+GET {{SchoolManagementApi_HostAddress}}/api/students/
+Accept: application/json
+
+GET {{SchoolManagementApi_HostAddress}}/api/assignments/
+Accept: application/json
+
+GET {{SchoolManagementApi_HostAddress}}/api/students/{id}
+Accept: application/json
+
+GET {{SchoolManagementApi_HostAddress}}/api/assignments/{id}
+Accept: application/json
+
+POST {{SchoolManagementApi_HostAddress}}/api/students/
+Accept: application/json
+
+POST {{SchoolManagementApi_HostAddress}}/api/assignments/
+Accept: application/json
+
+PUT {{SchoolManagementApi_HostAddress}}/api/assignments/{id}
+Accept: application/json
+
+DELETE {{SchoolManagementApi_HostAddress}}/api/assignments/{id}
+Accept: application/json
+
+PUT {{SchoolManagementApi_HostAddress}}/api/students/{id}
+Accept: application/json
+
+DELETE {{SchoolManagementApi_HostAddress}}/api/students/{id}
+Accept: application/json
+###

@@ -1,0 +1,9 @@
+@_27_FitnessCenterApi_HostAddress = http://localhost:5241
+
+GET {{_27_FitnessCenterApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+GET {{_25_cryptoPriceAPI_HostAddress}}/api/
+Accept: application/json
+
+###
