@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using RestApiDestinations.Data;
 
 namespace RestApiDestinations
 {
@@ -6,6 +9,8 @@ namespace RestApiDestinations
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            builder.Services.AddDbContext<AppDbContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("RestApiDestinationsContext") ?? throw new InvalidOperationException("Connection string 'RestApiDestinationsContext' not found.")));
 
             // Add services to the container.
 
@@ -13,7 +18,11 @@ namespace RestApiDestinations
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-
+            builder.Services.AddSingleton<CountryCodeService>();
+            var connectionString =
+          builder.Configuration.GetConnectionString("DefaultConnection");
+            builder.Services.AddDbContext<AppDbContext>(options =>
+                      options.UseSqlite(connectionString));
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

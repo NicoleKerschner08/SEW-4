@@ -1,0 +1,45 @@
+﻿@page
+@model RazorPagesMovie.Pages.MoviePages.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>ActionMovies</h1>
+    
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Movie[0].Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Movie[0].ReleaseDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Movie[0].Genre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Movie[0].Price)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+ 
+@foreach (var item in Model.Movie)
+{
+    if (item.Genre == "Action")
+    {
+        <tr>
+            <td>@item.Title</td>
+            <td>@item.ReleaseDate</td>
+            <td>@item.Genre</td>
+            <td>@item.Price</td>
+        </tr>
+    }
+}
+}
+    </tbody>
+</table>

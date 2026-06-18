@@ -3,4 +3,7 @@
 GET {{RestApiBook_HostAddress}}/weatherforecast/
 Accept: application/json
 
+GET {{RestApiBook_HostAddress}}/info/
+Accept: application/json
+
 ###

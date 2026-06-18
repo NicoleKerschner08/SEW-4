@@ -1,0 +1,52 @@
+﻿@page
+@model RazorPagesTrips.Pages.TravelAgencyPages.IndexModel
+
+@{
+    ViewData["Title"] = "TopRatings";
+}
+
+<h1>TopRatings</h1>
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TravelAgencies[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TravelAgencies[0].Country)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TravelAgencies[0].Rating)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.TravelAgencies)
+        {
+            if(item.Rating >= 4 && item.Rating <= 5)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(model => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => item.Country)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => item.Rating)
+                    </td>
+                    <td>
+                        <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                        <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+            
+        }
+    </tbody>
+</table>

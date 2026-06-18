@@ -1,0 +1,68 @@
+﻿@page
+@model RazorPagesTrips.Pages.TripPages.TripSelectorModel
+@{
+    <h1>Trip Selector</h1>
+
+    <form method="post">
+        <div>
+            <label>Max Zeit pro Tag:</label>
+            <input asp-for="overPrice" />
+        </div>
+
+        <button type="submit">absenden</button>
+    </form>
+    
+
+    <table class="table">
+    <thead>
+        <tr>
+            <th>
+                    @Html.DisplayNameFor(model => model.trips[0].Id)
+            </th>
+            <th>
+                    @Html.DisplayNameFor(model => model.trips[0].destination)
+            </th>
+            <th>
+                    @Html.DisplayNameFor(model => model.trips[0].days)
+            </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.trips[0].price)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+@foreach (var item in Model.trips) {
+                @if (item.overPrice == false)
+                {
+                
+        <tr>
+            <td>
+                @Html.DisplayFor(model => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.destination)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.days)
+            </td><td>
+                @Html.DisplayFor(model => item.days)
+            </td>
+                        <td>
+                            @Html.DisplayFor(model => item.price)
+                        </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+        }
+}
+    </tbody>
+</table>
+
+}
+
+                

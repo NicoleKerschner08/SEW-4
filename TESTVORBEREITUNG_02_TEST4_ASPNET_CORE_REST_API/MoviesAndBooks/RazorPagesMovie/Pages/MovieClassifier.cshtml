@@ -1,0 +1,18 @@
+﻿@page
+@model RazorPagesMovie.Pages.MoviePages.MovieClassifierModel
+
+<h1>Movie Classifier</h1>
+
+<form method="post">
+    <div>
+        <label>Dauer in Minuten:</label>
+        <input asp-for="Duration" />
+    </div>
+
+    <button type="submit">Klassifizieren</button>
+</form>
+
+@if (!string.IsNullOrEmpty(Model.Result))
+{
+    <p>Typ: @Model.Result</p>
+}

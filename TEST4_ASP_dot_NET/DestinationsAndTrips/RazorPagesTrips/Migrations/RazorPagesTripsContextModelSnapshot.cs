@@ -36,6 +36,27 @@ namespace RazorPagesTrips.Migrations
 
                     b.ToTable("TravelAgency");
                 });
+
+            modelBuilder.Entity("RazorPagesTrips.Models.Trip", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("days")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("destination")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<float>("price")
+                        .HasColumnType("REAL");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Trip");
+                });
 #pragma warning restore 612, 618
         }
     }

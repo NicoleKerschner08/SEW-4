@@ -29,6 +29,12 @@
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.TravelAgency.Rating)
         </dd>
+        <dd class = "col-sm-10">
+            @if(Model.TravelAgency.Rating > 4)
+            {
+                <text>Top Rating!</text>
+            }
+        </dd>
     </dl>
 </div>
 <div>
